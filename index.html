@@ -16,21 +16,34 @@
 		<!-- external and on-page JavaScript goes here -->
 		<script type="text/javascript" src="scripts.js" defer=""></script>
 		<script>
-			// on-page JavaScript, if any, goes here
+     document.getElementById("Ingredients").ontoggle = function() {myFunction()};
+     document.getElementById("equipment").ontoggle = function() {myFunction()};
+     document.getElementById("directions").ontoggle = function() {myFunction()};
+     document.getElementById("nutrition").ontoggle = function() {myFunction()};
+      
+function myFunction() {
+  alert("The ontoggle event occured");
+}
+      
+
+function myFunction2() {
+  document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1499636136210-6f4ee915583e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80')";
+}
 		</script>
 
 	</head>
 
-	<body>
-    
-   
+	<body onload ="myFunction()">
+
     
     <div id="Batter">
- <h1>Best Chocolate Chip Cookies</h1>
+ <h1 id="H1">Best Chocolate Chip Cookies</h1>
 </div>
 
-<div id="ingredients">
-  <h4>Ingredients</h4>
+    
+      
+<details id="ingredients">
+  <summary> Ingredients </summary>
   <ul>
     <li>1 cup butter, softened</li>
     <li>1 cup white sugar</li>
@@ -43,11 +56,13 @@
     <li> cups all-purpose flour </li>
     <li>2 cups semisweet chocolate chips</li>
     <li>1 cup chopped walnuts</li>
-    
-</div>
+  </ul>
+</details>
+      
 
-<div id="equipment">
-  <h4>Kitchen Equipment</h4>
+        
+<details id="equipment">
+  <summary>Kitchen Equipment</summary>
   <ul>
     <li>Oven</li>
     <li>13" x 9" pan</li>
@@ -56,10 +71,11 @@
     <li>Wisk</li>
     <li>Serving spoon</li>
   </ul>
-</div>
+</details>
 
-<div id="directions">
-  <h4>Directions</h4>
+      
+<details id="directions">
+  <summary>Directions</summary>
   <ol>
     <li> Preheat oven to 350 degrees F (175 degrees C)..</li>
     <li> Cream together the butter, white sugar, and brown sugar until smooth.</li>
@@ -70,10 +86,10 @@
     <li> Drop by large spoonfuls onto ungreased pans.</li>
     <li> Bake for about 10 minutes in the preheated oven, or until edges are nicely browned.</li>
   </ol>
-</div>
-  
-  <div id="nutrition">
-  <h4>Nutrition Facts</h4>
+</details>
+
+  <details id="nutrition">
+    <summary>Nutrition Facts</summary>
   <ul>
    <li><b>Per Serving: </b></li>
     <li> Calories: 298</li>
@@ -83,7 +99,9 @@
     <li> Cholesterol: 35.8mg</li>
     <li> Sodium: 165.8mg</li>
   </ul>
-</div>
+</details>
+
+    <button type="button" onclick="myFunction2()">Set image</button>
 
 <p class="copyright">(Original recipe at <a href="https://www.allrecipes.com/recipe/10813/best-chocolate-chip-cookies/">AllRecipes.com</a>.) Photo by <a href="https://unsplash.com/@pamslens?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pam Menegakis</a> on <a href="https://unsplash.com/s/photos/cookie-image?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
 

@@ -1,4 +1,7 @@
-window.onload = function()
-{
-document.getElementById("myH2").style.color = "#ff0000";
-}
+function myFunction() 
+      {
+     document.getElementById("H1").style.color = "#DEB887";
+
+      
+      }
+ 

@@ -1,7 +1,8 @@
 /* Small devices  */
 @media only screen and (min-width: 575px) 
 {
-    div
+   details
+ 
   {
     display: inline;
     position: relative;
@@ -33,8 +34,7 @@
 /* Large devices  */
 @media only screen and (min-width: 992px) 
 {
- div
-  {
+ details{
     display: inline-block;
     position: relative;
     background-color: #DEB887; 
